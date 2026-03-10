@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace DmKravchuk\IpClock\Contract;
 
-use DmKravchuk\IpClock\Data\IpAddressDto;
+use DmKravchuk\IpClock\Data\IpAddressVo;
 use DmKravchuk\IpClock\Data\ServerTimeDto;
 use DmKravchuk\IpClock\Exception\TimeResolutionException;
 
@@ -18,7 +18,7 @@ interface TimeProviderInterface
      *
      * @throws TimeResolutionException When time cannot be resolved
      */
-    public function getTime(IpAddressDto $ip): ServerTimeDto;
+    public function getTime(IpAddressVo $ip): ServerTimeDto;
 
     /**
      * Returns provider name used in logs and error messages

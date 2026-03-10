@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace DmKravchuk\IpClock\Contract;
 
-use DmKravchuk\IpClock\Data\IpAddressDto;
+use DmKravchuk\IpClock\Data\IpAddressVo;
 use DmKravchuk\IpClock\Exception\IpResolutionException;
 
 /**
@@ -20,5 +20,5 @@ interface IpResolverInterface
      *
      * @throws IpResolutionException When the IP cannot be resolved
      */
-    public function resolve(?string $ip = null): IpAddressDto;
+    public function resolve(?string $ip = null): IpAddressVo;
 }
