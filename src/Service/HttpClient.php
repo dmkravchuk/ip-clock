@@ -10,7 +10,7 @@ use GuzzleHttp\Exception\GuzzleException;
 /**
  * Handles all outgoing HTTP requests with shared defaults
  */
-final class HttpClient
+class HttpClient
 {
     private const TIMEOUT = 5;
     private const CONNECT_TIMEOUT = 3;
