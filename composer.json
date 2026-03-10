@@ -31,8 +31,10 @@
         }
     },
     "scripts": {
-        "test": "phpunit --testsuite Unit",
-        "test:all": "phpunit",
+        "test": "phpunit",
+        "test:unit": "phpunit --testsuite Unit",
+        "test:feature": "phpunit --testsuite Feature",
+        "test:integration": "phpunit --testsuite Integration",
         "analyse": "phpstan analyse src tests --level=8",
         "cs-fix": "php-cs-fixer fix"
     },
