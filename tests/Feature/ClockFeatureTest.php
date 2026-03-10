@@ -130,8 +130,8 @@ class ClockFeatureTest extends TestCase
         $logger = new NullLogger();
 
         $mock = new MockHandler([
-            new Response(200, [], json_encode(['ip' => self::SERVER_IP])),
-            new Response(200, [], json_encode($timeApiResponse)),
+            new Response(200, [], (string) json_encode(['ip' => self::SERVER_IP])),
+            new Response(200, [], (string) json_encode($timeApiResponse)),
         ]);
 
         $handlerStack = HandlerStack::create($mock);
